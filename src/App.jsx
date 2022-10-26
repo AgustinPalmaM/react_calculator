@@ -12,10 +12,14 @@ function App() {
     setInput(input + value)
   };
 
+  const clearInput = () => {
+    setInput('')
+  }
+
   return (
     <div className='App'>
       <div className='title-container'>
-        <h1 className='title'>Online Calculator</h1>
+        <h1 className='title'>Online React Calculator</h1>
       </div>
       <div className="calculator-container">
         <div> 
@@ -48,7 +52,7 @@ function App() {
           <Button clickHandler={addInput}>/</Button>
         </div>
         <div className='fila'>
-          <ClearButton clearHandler={() => setInput('')}>Clear</ClearButton>
+          <ClearButton clearHandler={clearInput}>Clear</ClearButton>
         </div>
       </div>
     </div>
