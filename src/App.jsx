@@ -7,18 +7,27 @@ import { evaluate } from 'mathjs';
 
 function App() {
 
-  const [input, setInput] = useState('0');
+  const [input, setInput] = useState('');
 
   const addInput = (value) => {
-    setInput(input + value)
+    if ((input + value).length >= 18) {
+      alert('insert not more than 18 digits');
+      setInput('')
+    } else {
+      setInput(input + value);
+    }
   };
 
+
+
   const clearInput = () => {
-    setInput('0')
+    setInput('')
   }
 
   const calculateResult = () => {
-    setInput(evaluate(input));
+    if (input) {
+      setInput(evaluate(input));
+    }
   }
 
   return (
