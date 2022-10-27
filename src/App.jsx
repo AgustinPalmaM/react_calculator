@@ -7,14 +7,14 @@ import { evaluate } from 'mathjs';
 
 function App() {
 
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState('0');
 
   const addInput = (value) => {
     setInput(input + value)
   };
 
   const clearInput = () => {
-    setInput('')
+    setInput('0')
   }
 
   const calculateResult = () => {
@@ -29,35 +29,35 @@ function App() {
       <div className="calculator-container">
         <div> 
           <Screen 
-            input={input}
+            input={ input }
           />
         </div>
         <div className='fila'>
-          <Button clickHandler={addInput}>1</Button>
-          <Button clickHandler={addInput}>2</Button>
-          <Button clickHandler={addInput}>3</Button>
-          <Button clickHandler={addInput}>+</Button>
+          <Button clickHandler={ addInput }>1</Button>
+          <Button clickHandler={ addInput }>2</Button>
+          <Button clickHandler={ addInput }>3</Button>
+          <Button clickHandler={ addInput }>+</Button>
         </div>
         <div className='fila'>
-          <Button clickHandler={addInput}>4</Button>
-          <Button clickHandler={addInput}>5</Button>
-          <Button clickHandler={addInput}>6</Button>
-          <Button clickHandler={addInput}>-</Button>
+          <Button clickHandler={ addInput }>4</Button>
+          <Button clickHandler={ addInput }>5</Button>
+          <Button clickHandler={ addInput }>6</Button>
+          <Button clickHandler={ addInput }>-</Button>
         </div>
         <div className='fila'>
-          <Button clickHandler={addInput}>7</Button>
-          <Button clickHandler={addInput}>8</Button>
-          <Button clickHandler={addInput}>9</Button>
-          <Button clickHandler={addInput}>*</Button>
+          <Button clickHandler={ addInput }>7</Button>
+          <Button clickHandler={ addInput }>8</Button>
+          <Button clickHandler={ addInput }>9</Button>
+          <Button clickHandler={ addInput }>*</Button>
         </div>
         <div className='fila'>
-          <Button clickHandler={calculateResult}>=</Button>
-          <Button clickHandler={addInput}>0</Button>
-          <Button clickHandler={addInput}>.</Button>
-          <Button clickHandler={addInput}>/</Button>
+          <Button clickHandler={ calculateResult }>=</Button>
+          <Button clickHandler={ addInput }>0</Button>
+          <Button clickHandler={ addInput }>.</Button>
+          <Button clickHandler={ addInput }>/</Button>
         </div>
         <div className='fila'>
-          <ClearButton clearHandler={clearInput}>Clear</ClearButton>
+          <ClearButton clearHandler={ clearInput }>Clear</ClearButton>
         </div>
       </div>
     </div>
