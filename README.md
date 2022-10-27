@@ -30,5 +30,3 @@ Then you can make deploy to github pages using npm run deploy, you need to insta
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
